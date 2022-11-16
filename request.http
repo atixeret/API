@@ -1,0 +1,122 @@
+//// registro
+
+###
+POST http://localhost:9000/auth/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": "03",
+    "email" : "Sandralopez@gmail.com",
+    "nombre": "Sandra Lopez",
+    "privilegios": "A",
+    "password": "12745",
+    "area": "CENADEM"
+}
+//login
+###
+POST http://localhost:9000/api/login HTTP/1.1
+Content-Type: application/json
+{
+    "id": "02",
+    "email" : "teresita@gmail.com",
+    "nombre": "Teresita",
+    "privilegios": "J",
+    "password": "1234",
+    "area": "LIEF",
+}
+
+
+
+
+// perfil
+###
+POST http://localhost:9000/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_ficha": "210",
+    "nombre" : "Francisco",
+    "paterno": "Ramirez",
+    "materno": "Lopez",
+    "alias": "Herry",
+    "pertence": "CJNG",
+    "puesto": "Jefe de Plaza",
+    "analista": "60370",
+    "f_reg": "2022-11-07",
+    "foto": "perfil/Rigoberto_Diaz_Soto.jpg",
+    "estado": "Jalisco",
+    "municipio": "Zapopa"
+}
+
+###
+GET http://localhost:9000/api/users HTTP/1.1
+
+
+###
+GET http://localhost:9000/api/users/636ecf5bf994bc77cea55865 HTTP/1.1
+
+
+###
+PUT http://localhost:9000/api/users/636ecf5bf994bc77cea55865 HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_ficha": "209",
+    "nombre" : "Gerado",
+    "paterno": "Fernandez",
+    "materno": "Garcia",
+    "alias": "El Herry",
+    "pertence": "CJNG",
+    "puesto": "Jefe de Sicarios",
+    "analista": "60370",
+    "f_reg": "2022-11-07",
+    "foto": "perfil/Rigoberto_Diaz_Soto.jpg",
+    "estado": "Sinaloa",
+    "municipio": "Los Mochis"
+}
+
+
+###
+DELETE http://localhost:9000/api/users/36ecf5bf994bc77cea55865 HTTP/1.1
+
+// cartel//
+
+###
+POST http://localhost:9000/api/cartels HTTP/1.1
+Content-Type: application/json
+
+{
+    "idcartel": "55",
+    "cartel" : "Los Salazares",
+    "celula": "Salazares Jr",
+    "alianza": "CDS"
+}
+
+###
+GET http://localhost:9000/api/cartels HTTP/1.1
+
+
+###
+GET http://localhost:9000/api/cartels/6373cf2226103fc33c38c97f HTTP/1.1
+
+
+###
+PUT http://localhost:9000/api/cartels/6373cf2226103fc33c38c97f HTTP/1.1
+Content-Type: application/json
+
+{
+    "idcartel": "55",
+    "cartel" : "Los Salazares",
+    "celula": "Salazares Jr",
+    "alianza": "CDS"
+}
+
+
+###
+DELETE http://localhost:9000/api/cartels/6373cf2226103fc33c38c97f HTTP/1.1
+
+
+
+
+
+
