@@ -20,7 +20,7 @@ const app = express();
 require ("./config/database.js");
 
 // settings
-const port = process.env.PORT || 9000;
+const port = process.env.PORT;
 app.set('views',path.join(__dirname,'views'));
 
 
